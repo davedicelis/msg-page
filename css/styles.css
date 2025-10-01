@@ -1,8 +1,64 @@
-/* 
+/*
 ==============================================
-MEDISCIENCE SPEAKERS - MAIN STYLESHEET
+MEDISCIENCE GROUP - MAIN STYLESHEET
 ==============================================
 */
+
+/* ===== CUSTOM FONTS ===== */
+@font-face {
+    font-family: 'Heading Now Trial';
+    src: url('../assets/Fonts/HeadingNowTrial-53Book.ttf') format('truetype');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Heading Now Trial';
+    src: url('../assets/Fonts/HeadingNowTrial-54Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Heading Now Trial';
+    src: url('../assets/Fonts/HeadingNowTrial-57Extrabold.ttf') format('truetype');
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis';
+    src: url('../assets/Fonts/Metropolis-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis';
+    src: url('../assets/Fonts/Metropolis-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis';
+    src: url('../assets/Fonts/Metropolis-SemiBold.otf') format('opentype');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis';
+    src: url('../assets/Fonts/Metropolis-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Phosphate';
+    src: url('../assets/Fonts/Phosphate.ttc') format('truetype-collection');
+    font-display: swap;
+}
 
 /* ===== VARIABLES CSS ===== */
 :root {
@@ -15,8 +71,17 @@ MEDISCIENCE SPEAKERS - MAIN STYLESHEET
     --text-color: #374151;
     --border-color: #e5e7eb;
     
-    --font-primary: 'Outfit', sans-serif;
-    --font-secondary: 'Saira', sans-serif;
+    --font-heading: 'Heading Now Trial', sans-serif;
+    --font-body: 'Metropolis', sans-serif;
+    --font-accent: 'Phosphate', display;
+
+    /* Typography weights */
+    --font-weight-book: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
     
     --section-padding: 5rem 0;
     --border-radius: 0.75rem;
@@ -32,16 +97,39 @@ MEDISCIENCE SPEAKERS - MAIN STYLESHEET
 }
 
 body {
-    font-family: var(--font-secondary);
+    font-family: var(--font-body);
     color: var(--text-color);
     line-height: 1.6;
     overflow-x: hidden;
+    padding-top: 85px;
+    font-weight: var(--font-weight-regular);
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-primary);
-    font-weight: 600;
+/* Typography hierarchy */
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-extrabold);
     line-height: 1.2;
+}
+
+h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-regular);
+    line-height: 1.2;
+}
+
+p, li {
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-regular);
+}
+
+.nav-link, .btn {
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-medium);
+}
+
+.brand-accent, .special-text {
+    font-family: var(--font-accent);
 }
 
 /* ===== UTILITY CLASSES ===== */
@@ -98,6 +186,10 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: var(--box-shadow);
     transition: var(--transition);
     padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1050;
 }
 
 .navbar-custom.scrolled {
@@ -113,6 +205,16 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--primary-color) !important;
 }
 
+.navbar-logo {
+    height: 55px;
+    width: auto;
+    transition: var(--transition);
+}
+
+.navbar-logo:hover {
+    transform: scale(1.05);
+}
+
 .nav-link {
     font-weight: 500;
     color: var(--text-color) !important;
@@ -126,42 +228,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ===== HERO SECTION ===== */
 .hero-section {
-    /* background: linear-gradient(135deg, var(--light-color) 0%, var(--white-color) 100%); */
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
     position: relative;
     overflow: hidden;
 }
 
-/* SVG Background que entra desde arriba */
-.hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../assets/images/bg_inicio1.svg');
-    /* background-size: cover; */
-    background-position: top;
-    background-repeat: no-repeat;
-    transform: translateY(-100%);
-    animation: bgSlideFromTop 1.2s ease-out forwards;
-    z-index: 0;
-}
-
-/* Sin overlay - colores originales del SVG */
-.hero-section::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    pointer-events: none;
-}
 
 @keyframes bgSlideFromTop {
     0% {
@@ -218,9 +288,167 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 50%;
 }
 
+/* ===== HERO CAROUSEL FULLSCREEN ===== */
+.hero-carousel-fullscreen {
+    height: 100vh;
+    position: relative;
+    transform: translateY(-100%);
+    animation: heroSlideDown 1.5s ease-out forwards;
+    margin-top: -85px;
+}
+
+.hero-slide {
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-attachment: fixed;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Animación de entrada desde arriba */
+@keyframes heroSlideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Carousel Controls for Fullscreen */
+.hero-carousel-fullscreen .carousel-control-prev,
+.hero-carousel-fullscreen .carousel-control-next {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    z-index: 3;
+}
+
+.hero-carousel-fullscreen .carousel-control-prev:hover,
+.hero-carousel-fullscreen .carousel-control-next:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+/* Carousel Indicators for Fullscreen */
+.hero-carousel-fullscreen .carousel-indicators {
+    bottom: 30px;
+    z-index: 3;
+}
+
+.hero-carousel-fullscreen .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    margin: 0 6px;
+    transition: var(--transition);
+}
+
+.hero-carousel-fullscreen .carousel-indicators button.active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero-slide {
+        height: 70vh;
+        min-height: 400px;
+        background-size: 100% auto;
+        background-position: center center;
+        background-attachment: scroll;
+        width: 100%;
+        overflow: hidden;
+        background-color: #f8fafc;
+    }
+
+    .hero-carousel-fullscreen {
+        height: 70vh;
+        min-height: 400px;
+        margin-top: -85px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-slide {
+        height: 60vh;
+        min-height: 400px;
+        max-height: 500px;
+        background-size: 100% auto;
+        background-position: center center;
+        background-color: #f8fafc;
+        width: 100%;
+        background-attachment: scroll;
+        overflow: hidden;
+    }
+
+    .hero-carousel-fullscreen {
+        height: 60vh;
+        min-height: 400px;
+        max-height: 500px;
+        width: 100%;
+        margin-top: -70px;
+    }
+
+    .hero-carousel-fullscreen .carousel-control-prev,
+    .hero-carousel-fullscreen .carousel-control-next {
+        width: 45px;
+        height: 45px;
+    }
+
+    .hero-carousel-fullscreen .carousel-indicators button {
+        width: 8px;
+        height: 8px;
+        margin: 0 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-slide {
+        height: 50vh;
+        min-height: 350px;
+        max-height: 400px;
+        background-size: 100% auto;
+        background-position: center center;
+        background-color: #f8fafc;
+        width: 100%;
+        background-attachment: scroll;
+        overflow: hidden;
+    }
+
+    .hero-carousel-fullscreen {
+        height: 50vh;
+        min-height: 350px;
+        max-height: 400px;
+        width: 100%;
+        margin-top: -60px;
+    }
+
+    .hero-carousel-fullscreen .carousel-control-prev,
+    .hero-carousel-fullscreen .carousel-control-next {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hero-carousel-fullscreen .carousel-indicators button {
+        width: 6px;
+        height: 6px;
+        margin: 0 3px;
+    }
+}
+
 /* ===== ABOUT SECTION ===== */
 .about-section {
-    background: var(--white-color);
+    /* background: var(--white-color); */
     position: relative;
     overflow: hidden;
 }
@@ -232,13 +460,13 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../assets/images/bg2');
+    background-image: url('../assets/images/Bg_02.svg');
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
-    opacity: 0.6;
-    transform: translateY(-100%) scaleX(-1);
-    transition: transform 1.5s ease-out;
+    /* opacity: 0.6; */
+    /* transform: translateY(-100%) scaleX(-1);
+    transition: transform 1.5s ease-out; */
     z-index: 0;
 }
 
@@ -276,6 +504,15 @@ h1, h2, h3, h4, h5, h6 {
     gap: 1rem;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+/* Grid responsive para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .labmark-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 180px;
+        gap: 0.8rem;
+    }
 }
 
 .labmark-card {
@@ -323,13 +560,95 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    background-color: #f8fafc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .labmark-card-content img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     transition: opacity 0.4s ease;
+    background-color: #f8fafc;
+}
+
+/* Estilos específicos para las imágenes del ABOUT SECTION */
+.labmark-card-content img[src*="editorial.png"] {
+    object-fit: cover;
+    object-position: center center;
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+}
+
+.labmark-card-content img[src*="digitales.png"] {
+    object-fit: cover;
+    object-position: center center;
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+}
+
+.labmark-card-content img[src*="veeva.png"] {
+    object-fit: cover;
+    object-position: center center;
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+}
+
+.labmark-card-content img[src*="eventos.png"] {
+    object-fit: cover;
+    object-position: center center;
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+}
+
+/* Mejoras responsive para las tarjetas */
+@media (max-width: 1024px) {
+    .labmark-card-content img[src*="editorial.png"],
+    .labmark-card-content img[src*="digitales.png"],
+    .labmark-card-content img[src*="veeva.png"],
+    .labmark-card-content img[src*="eventos.png"] {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .labmark-card-content img {
+        object-fit: cover;
+        object-position: center;
+        background-color: #ffffff;
+        width: 100%;
+        height: 100%;
+    }
+
+    .labmark-card-content img[src*="editorial.png"],
+    .labmark-card-content img[src*="digitales.png"],
+    .labmark-card-content img[src*="veeva.png"],
+    .labmark-card-content img[src*="eventos.png"] {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .labmark-card-content img[src*="editorial.png"],
+    .labmark-card-content img[src*="digitales.png"],
+    .labmark-card-content img[src*="veeva.png"],
+    .labmark-card-content img[src*="eventos.png"] {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        background-color: #ffffff;
+    }
 }
 
 .labmark-overlay {
@@ -495,6 +814,97 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1.5rem;
 }
 
+/* ===== SERVICES SECTION ===== */
+.services-section {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.services-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/images/bg1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* opacity: 0.1; */
+    z-index: 0;
+}
+
+.services-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.service-card {
+    background: var(--white-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+    overflow: hidden;
+    height: 100%;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 188, 212, 0.15);
+    border-color: var(--primary-color);
+}
+
+.service-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto 1.5rem;
+    color: var(--white-color);
+    font-size: 1.8rem;
+    box-shadow: 0 8px 25px rgba(0, 188, 212, 0.3);
+    transition: var(--transition);
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+    box-shadow: 0 12px 30px rgba(0, 188, 212, 0.4);
+}
+
+.service-info {
+    padding: 0 2rem 2rem;
+    text-align: center;
+}
+
+.service-name {
+    font-size: 1.25rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+}
+
+.service-category {
+    color: var(--primary-color);
+    font-weight: var(--font-weight-medium);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.service-description {
+    color: var(--text-color);
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
 /* ===== EVENTS SECTION ===== */
 .events-section {
     background: var(--white-color);
@@ -634,6 +1044,17 @@ h1, h2, h3, h4, h5, h6 {
     padding: 3rem 0 1rem;
 }
 
+.footer-logo {
+    height: 45px;
+    width: auto;
+    filter: brightness(0) invert(1);
+    transition: var(--transition);
+}
+
+.footer-logo:hover {
+    filter: brightness(0) invert(1) sepia(1) hue-rotate(180deg) saturate(5);
+}
+
 .footer h5 {
     color: var(--white-color);
     margin-bottom: 1rem;
@@ -716,9 +1137,9 @@ h1, h2, h3, h4, h5, h6 {
         background-position: center bottom;
     }
     
-    .hero-section::before {
+    /* .hero-section::before {
         background: rgba(248, 250, 252, 0.9);
-    }
+    } */
     
     .hero-illustration {
         width: 300px;
@@ -738,7 +1159,7 @@ h1, h2, h3, h4, h5, h6 {
     /* Labmark Grid Responsive */
     .labmark-grid {
         grid-template-columns: 1fr;
-        grid-auto-rows: 180px;
+        grid-auto-rows: 200px;
         gap: 0.75rem;
     }
     

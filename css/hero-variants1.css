@@ -19,11 +19,11 @@ Para activar una variante específica, reemplaza la clase en styles.css
     background-position: center;
     background-repeat: no-repeat;
     opacity: 0;
-    transform: translateX(-100px) scale(0.95);
-    animation: heroBackgroundZenSlide 2.5s ease-out 0.8s forwards;
+    /* transform: translateX(-100px) scale(0.95);
+    animation: heroBackgroundZenSlide 2.5s ease-out 0.8s forwards; */
     z-index: 0;
 }
-
+/* 
 .hero-section.variant-zen::after {
     content: '';
     position: absolute;
@@ -39,7 +39,7 @@ Para activar una variante específica, reemplaza la clase en styles.css
     animation: gentleGlow 6s ease-in-out infinite, overlayFadeIn 1.5s ease-out 2s forwards;
     z-index: 1;
     opacity: 0;
-}
+} */
 
 /* Elementos Zen - solo partículas sutiles */
 .hero-section.variant-zen .floating-particle {
@@ -51,7 +51,7 @@ Para activar una variante específica, reemplaza la clase en styles.css
 
 /* ===== VARIANTE 3: VIBRANTE CON PARTÍCULAS ===== */
 /* Reemplazar .hero-section::before con: */
-.hero-section.variant-dynamic::before {
+/* .hero-section.variant-dynamic::before {
     content: '';
     position: absolute;
     top: 0;
@@ -66,9 +66,9 @@ Para activar una variante específica, reemplaza la clase en styles.css
     transform: translateX(-120px) scale(0.9) rotateZ(-2deg);
     animation: heroBackgroundDynamicEntry 3.5s cubic-bezier(0.23, 1, 0.32, 1) 0.3s forwards;
     z-index: 0;
-}
+} */
 
-.hero-section.variant-dynamic::after {
+/* .hero-section.variant-dynamic::after {
     content: '';
     position: absolute;
     top: 0;
@@ -85,10 +85,10 @@ Para activar una variante específica, reemplaza la clase en styles.css
     animation: energyPulse 4s ease-in-out infinite, overlayFadeIn 2s ease-out 2s forwards;
     z-index: 1;
     opacity: 0;
-}
+} */
 
 /* Partículas dinámicas más grandes y coloridas */
-.hero-section.variant-dynamic .floating-particle {
+/* .hero-section.variant-dynamic .floating-particle {
     width: 12px;
     height: 12px;
     background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
@@ -101,10 +101,10 @@ Para activar una variante específica, reemplaza la clase en styles.css
     background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     animation-duration: 4s;
     animation-direction: reverse;
-}
+} */
 
 /* Elementos adicionales para la variante dinámica */
-.hero-section.variant-dynamic .floating-elements::before {
+/* .hero-section.variant-dynamic .floating-elements::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -119,7 +119,7 @@ Para activar una variante específica, reemplaza la clase en styles.css
     transform: translate(-50%, -50%);
     animation: energyPulse 6s ease-in-out infinite;
     z-index: 0;
-}
+} */
 
 /* ===== INSTRUCCIONES DE USO ===== */
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mediscience Speakers | Conectando Ciencia y Liderazgo Médico</title>
+    <title>MediScience Group | Soluciones Médicas y Científicas Avanzadas</title>
 
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -23,7 +23,7 @@
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#home">
-                <i class="bi bi-activity me-2"></i>Mediscience Speakers
+                <img src="assets/images/speakers/logoMSG.svg" alt="MediScience Group" class="navbar-logo">
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -39,10 +39,7 @@
                         <a class="nav-link" href="#about">Nosotros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#speakers">Conferencistas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#events">Eventos</a>
+                        <a class="nav-link" href="#services">Productos y Servicios</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#clients">Clientes</a>
@@ -57,32 +54,42 @@
 
     <!-- ===== HERO SECTION ===== -->
     <section id="home" class="hero-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="hero-content fade-in">
-                        <h1>Mediscience <span style="color: var(--secondary-color);">Speakers</span></h1>
-                        <p class="lead">Conectamos la excelencia científica con el liderazgo médico. Descubre a los
-                            mejores conferencistas especializados en medicina, investigación y innovación en salud.</p>
-                        <div class="d-flex flex-wrap gap-3">
-                            <a href="#speakers" class="btn btn-custom btn-primary-custom">
-                                Descubre Conferencistas
-                            </a>
-                            <a href="#about" class="btn btn-custom btn-outline-custom">
-                                Conoce Más
-                            </a>
-                        </div>
-                    </div>
+        <!-- Hero Carousel with Background Images -->
+        <div id="heroCarousel" class="carousel slide hero-carousel-fullscreen" data-bs-ride="carousel"
+            data-bs-interval="3200">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="hero-slide" style="background-image: url('assets/images/bg1.png');"></div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="text-center fade-in">
-                        <div class="hero-illustration">
-                            <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWRvZGxpNnB5czcwYWVlYWFzazVveDVleXhkd2t3N3k3OWx6ejI5diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ABpuekpFpfQIJm9mEN/giphy.gif"
-                                alt="Mediscience Animation" class="hero-gif">
-                        </div>
-                    </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="hero-slide" style="background-image: url('assets/images/bg2.png');"></div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <div class="hero-slide" style="background-image: url('assets/images/bg3.png');"></div>
                 </div>
             </div>
+
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </section>
 
@@ -91,10 +98,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="section-title fade-in">Sobre Mediscience Speakers</h2>
+                    <h2 class="section-title fade-in">Sobre MediScience Group</h2>
                     <p class="section-subtitle fade-in">
-                        Somos la plataforma líder en conectar organizaciones con los mejores conferencistas del ámbito
-                        médico y científico.
+                        Somos una empresa líder en desarrollo de soluciones tecnológicas y científicas para el sector
+                        médico y farmacéutico.
                     </p>
                 </div>
             </div>
@@ -103,11 +110,10 @@
             <div class="labmark-grid mt-4">
                 <a href="#excelencia-medica" class="labmark-card fade-in large">
                     <div class="labmark-card-content">
-                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Excelencia Médica">
+                        <img src="./assets/images/editorial.png" alt="Excelencia Médica">
                         <div class="labmark-overlay">
                             <div class="labmark-text">
-                                <h3>Excelencia Médica</h3>
+                                <h3>EDITORIAL MÉDICA</h3>
                                 <p>Profesionales médicos reconocidos mundialmente</p>
                             </div>
                         </div>
@@ -116,11 +122,10 @@
 
                 <a href="#innovacion-cientifica" class="labmark-card fade-in medium">
                     <div class="labmark-card-content">
-                        <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Innovación Científica">
+                        <img src="./assets/images/diseno.png" alt="Innovación Científica">
                         <div class="labmark-overlay">
                             <div class="labmark-text">
-                                <h3>Innovación Científica</h3>
+                                <h3>PROYECTOS DIGITALES</h3>
                                 <p>Investigación de vanguardia</p>
                             </div>
                         </div>
@@ -129,11 +134,10 @@
 
                 <a href="#alcance-global" class="labmark-card fade-in tall">
                     <div class="labmark-card-content">
-                        <img src="https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Alcance Global">
+                        <img src="./assets/images/veeva.png" alt="Alcance Global">
                         <div class="labmark-overlay">
                             <div class="labmark-text">
-                                <h3>Alcance Global</h3>
+                                <h3>VEEVA PARTNER</h3>
                                 <p>Red internacional de expertos</p>
                             </div>
                         </div>
@@ -142,11 +146,10 @@
 
                 <a href="#networking-medico" class="labmark-card fade-in small">
                     <div class="labmark-card-content">
-                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Networking Médico">
+                        <img src="./assets/images/eventos.png" alt="Networking Médico">
                         <div class="labmark-overlay">
                             <div class="labmark-text">
-                                <h3>Networking</h3>
+                                <h3>PRODUCCIÓN DE EVENTOS</h3>
                                 <p>Conexiones estratégicas</p>
                             </div>
                         </div>
@@ -155,8 +158,7 @@
 
                 <a href="#educacion-continua" class="labmark-card fade-in wide">
                     <div class="labmark-card-content">
-                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Educación Continua">
+                        <img src="./assets/images/aplicaciones.png" alt="Educación Continua">
                         <div class="labmark-overlay">
                             <div class="labmark-text">
                                 <h3>Educación Continua</h3>
@@ -168,8 +170,7 @@
 
                 <a href="#tecnologia-salud" class="labmark-card fade-in medium">
                     <div class="labmark-card-content">
-                        <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Tecnología en Salud">
+                        <img src="./assets/images/email.png" alt="Tecnología en Salud">
                         <div class="labmark-overlay">
                             <div class="labmark-text">
                                 <h3>Tecnología</h3>
@@ -207,8 +208,7 @@
 
                 <a href="#especializaciones" class="labmark-card fade-in wide">
                     <div class="labmark-card-content">
-                        <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Especializaciones Médicas">
+                        <img src="./assets/images/educacion.png" alt="Especializaciones Médicas">
                         <div class="labmark-overlay">
                             <div class="labmark-text">
                                 <h3>Especializaciones</h3>
@@ -222,129 +222,121 @@
         </div>
     </section>
 
-    <!-- ===== SPEAKERS SECTION ===== -->
-    <section id="speakers" class="speakers-section section-padding">
+    <!-- ===== PRODUCTOS Y SERVICIOS SECTION ===== -->
+    <section id="services" class="services-section section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="section-title fade-in">Nuestros Conferencistas</h2>
+                    <h2 class="section-title fade-in">Productos y Servicios</h2>
                     <p class="section-subtitle fade-in">
-                        Médicos líderes, investigadores y expertos en salud reconocidos mundialmente.
+                        Soluciones tecnológicas avanzadas y servicios especializados para el sector médico y
+                        farmacéutico.
                     </p>
                 </div>
             </div>
 
             <div class="row g-4 mt-4">
                 <div class="col-lg-4 col-md-6">
-                    <div class="card speaker-card fade-in">
-                        <div class="speaker-image">
-                            <i class="bi bi-person-circle"></i>
+                    <div class="card service-card fade-in">
+                        <div class="service-icon">
+                            <i class="bi bi-cpu"></i>
                         </div>
-                        <div class="speaker-info">
-                            <h5 class="speaker-name">Dr. María Elena Rodríguez</h5>
-                            <p class="speaker-specialty">Cardiología Intervencionista</p>
-                            <p class="speaker-description">Pionera en técnicas mínimamente invasivas y líder en
-                                investigación cardiovascular con más de 20 años de experiencia.</p>
-                            <button class="btn btn-custom btn-outline-custom" data-bs-toggle="modal"
-                                data-bs-target="#speakerModal"
-                                onclick="showSpeakerDetails('Dr. María Elena Rodríguez', 'Cardiología Intervencionista', 'Reconocida internacionalmente por sus contribuciones en cardiología intervencionista, la Dra. Rodríguez ha publicado más de 150 artículos científicos y ha sido galardonada con múltiples premios por su investigación en el tratamiento de enfermedades cardiovasculares.')">
-                                Ver Perfil
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="card speaker-card fade-in">
-                        <div class="speaker-image">
-                            <i class="bi bi-person-circle"></i>
-                        </div>
-                        <div class="speaker-info">
-                            <h5 class="speaker-name">Dr. Carlos Mendoza</h5>
-                            <p class="speaker-specialty">Oncología Molecular</p>
-                            <p class="speaker-description">Experto en terapias dirigidas y medicina personalizada en el
-                                tratamiento del cáncer.</p>
-                            <button class="btn btn-custom btn-outline-custom" data-bs-toggle="modal"
-                                data-bs-target="#speakerModal"
-                                onclick="showSpeakerDetails('Dr. Carlos Mendoza', 'Oncología Molecular', 'Líder mundial en el desarrollo de terapias moleculares contra el cáncer. Ha dirigido múltiples ensayos clínicos y es autor de más de 200 publicaciones en revistas de alto impacto. Su trabajo ha revolucionado el tratamiento personalizado en oncología.')">
-                                Ver Perfil
-                            </button>
+                        <div class="service-info">
+                            <h5 class="service-name">Tecnología Médica Digital</h5>
+                            <p class="service-category">Software y Hardware</p>
+                            <p class="service-description">Desarrollo de sistemas de diagnóstico digital, equipos
+                                médicos
+                                inteligentes y plataformas de telemedicina de última generación.</p>
+                            <a href="#contact" class="btn btn-custom btn-outline-custom">
+                                Más Información
+                            </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <div class="card speaker-card fade-in">
-                        <div class="speaker-image">
-                            <i class="bi bi-person-circle"></i>
+                    <div class="card service-card fade-in">
+                        <div class="service-icon">
+                            <i class="bi bi-flask"></i>
                         </div>
-                        <div class="speaker-info">
-                            <h5 class="speaker-name">Dra. Ana Patricia Silva</h5>
-                            <p class="speaker-specialty">Neurociencias</p>
-                            <p class="speaker-description">Investigadora líder en neuroplasticidad y enfermedades
-                                neurodegenerativas.</p>
-                            <button class="btn btn-custom btn-outline-custom" data-bs-toggle="modal"
-                                data-bs-target="#speakerModal"
-                                onclick="showSpeakerDetails('Dra. Ana Patricia Silva', 'Neurociencias', 'Neurocientífica de renombre internacional especializada en neuroplasticidad y enfermedades neurodegenerativas. Ha liderado investigaciones pioneras en el tratamiento del Alzheimer y Parkinson, y es miembro de múltiples sociedades científicas internacionales.')">
-                                Ver Perfil
-                            </button>
+                        <div class="service-info">
+                            <h5 class="service-name">Investigación y Desarrollo</h5>
+                            <p class="service-category">I+D Farmacéutico</p>
+                            <p class="service-description">Servicios de investigación clínica, desarrollo de fármacos y
+                                estudios de biomarcadores para la industria farmacéutica.</p>
+                            <a href="#contact" class="btn btn-custom btn-outline-custom">
+                                Más Información
+                            </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <div class="card speaker-card fade-in">
-                        <div class="speaker-image">
-                            <i class="bi bi-person-circle"></i>
+                    <div class="card service-card fade-in">
+                        <div class="service-icon">
+                            <i class="bi bi-gear-fill"></i>
                         </div>
-                        <div class="speaker-info">
-                            <h5 class="speaker-name">Dr. Roberto Fernández</h5>
-                            <p class="speaker-specialty">Medicina Regenerativa</p>
-                            <p class="speaker-description">Pionero en terapias con células madre y ingeniería de
-                                tejidos.</p>
-                            <button class="btn btn-custom btn-outline-custom" data-bs-toggle="modal"
-                                data-bs-target="#speakerModal"
-                                onclick="showSpeakerDetails('Dr. Roberto Fernández', 'Medicina Regenerativa', 'Investigador pionero en medicina regenerativa y terapias con células madre. Ha desarrollado tratamientos innovadores para la regeneración de tejidos y órganos, siendo reconocido mundialmente por sus contribuciones a la medicina del futuro.')">
-                                Ver Perfil
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="card speaker-card fade-in">
-                        <div class="speaker-image">
-                            <i class="bi bi-person-circle"></i>
-                        </div>
-                        <div class="speaker-info">
-                            <h5 class="speaker-name">Dra. Isabella Torres</h5>
-                            <p class="speaker-specialty">Medicina Digital</p>
-                            <p class="speaker-description">Experta en telemedicina, IA aplicada a la salud y
-                                transformación digital hospitalaria.</p>
-                            <button class="btn btn-custom btn-outline-custom" data-bs-toggle="modal"
-                                data-bs-target="#speakerModal"
-                                onclick="showSpeakerDetails('Dra. Isabella Torres', 'Medicina Digital', 'Líder en la transformación digital de la medicina, especializada en inteligencia artificial aplicada a diagnósticos médicos y telemedicina. Ha asesorado a gobiernos y organizaciones internacionales en la implementación de tecnologías de salud digital.')">
-                                Ver Perfil
-                            </button>
+                        <div class="service-info">
+                            <h5 class="service-name">Equipos Médicos Especializados</h5>
+                            <p class="service-category">Hardware Médico</p>
+                            <p class="service-description">Diseño y fabricación de equipos médicos de alta precisión
+                                para
+                                diagnóstico, monitoreo y tratamiento especializado.</p>
+                            <a href="#contact" class="btn btn-custom btn-outline-custom">
+                                Más Información
+                            </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <div class="card speaker-card fade-in">
-                        <div class="speaker-image">
-                            <i class="bi bi-person-circle"></i>
+                    <div class="card service-card fade-in">
+                        <div class="service-icon">
+                            <i class="bi bi-clipboard-data"></i>
                         </div>
-                        <div class="speaker-info">
-                            <h5 class="speaker-name">Dr. Francisco López</h5>
-                            <p class="speaker-specialty">Salud Pública Global</p>
-                            <p class="speaker-description">Epidemiólogo especializado en prevención de enfermedades
-                                infecciosas y políticas de salud.</p>
-                            <button class="btn btn-custom btn-outline-custom" data-bs-toggle="modal"
-                                data-bs-target="#speakerModal"
-                                onclick="showSpeakerDetails('Dr. Francisco López', 'Salud Pública Global', 'Epidemiólogo reconocido internacionalmente, ha liderado respuestas a múltiples crisis sanitarias globales. Experto en políticas de salud pública y prevención de enfermedades infecciosas, consultor de la OMS y autor de políticas sanitarias implementadas mundialmente.')">
-                                Ver Perfil
-                            </button>
+                        <div class="service-info">
+                            <h5 class="service-name">Consultoría Científica</h5>
+                            <p class="service-category">Servicios Especializados</p>
+                            <p class="service-description">Asesoría experta en regulación sanitaria, validación de
+                                procesos
+                                y cumplimiento normativo para la industria farmacéutica.</p>
+                            <a href="#contact" class="btn btn-custom btn-outline-custom">
+                                Más Información
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card service-card fade-in">
+                        <div class="service-icon">
+                            <i class="bi bi-droplet"></i>
+                        </div>
+                        <div class="service-info">
+                            <h5 class="service-name">Análisis de Laboratorio</h5>
+                            <p class="service-category">Servicios Diagnósticos</p>
+                            <p class="service-description">Servicios completos de análisis clínicos, microbiológicos y
+                                moleculares con tecnología de última generación.</p>
+                            <a href="#contact" class="btn btn-custom btn-outline-custom">
+                                Más Información
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card service-card fade-in">
+                        <div class="service-icon">
+                            <i class="bi bi-book"></i>
+                        </div>
+                        <div class="service-info">
+                            <h5 class="service-name">Capacitación Médica</h5>
+                            <p class="service-category">Formación Especializada</p>
+                            <p class="service-description">Programas de capacitación y actualización profesional para
+                                personal médico y técnico en tecnologías emergentes.</p>
+                            <a href="#contact" class="btn btn-custom btn-outline-custom">
+                                Más Información
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -352,147 +344,6 @@
         </div>
     </section>
 
-    <!-- ===== EVENTS SECTION ===== -->
-    <section id="events" class="events-section section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="section-title fade-in">Próximos Eventos</h2>
-                    <p class="section-subtitle fade-in">
-                        Conferencias, simposios y eventos médicos donde participan nuestros conferencistas.
-                    </p>
-                </div>
-            </div>
-
-            <div class="row g-4 mt-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="event-card fade-in">
-                        <div class="event-date">
-                            <div style="font-size: 1.5rem;">15</div>
-                            <div>NOV 2024</div>
-                        </div>
-                        <div class="event-content">
-                            <h5 class="event-title">Simposio Internacional de Cardiología</h5>
-                            <p class="event-location">
-                                <i class="bi bi-geo-alt"></i>
-                                Ciudad de México, México
-                            </p>
-                            <p class="event-description">
-                                Conferencia magistral sobre las últimas innovaciones en cardiología intervencionista y
-                                prevención cardiovascular.
-                            </p>
-                            <a href="#" class="btn btn-custom btn-outline-custom">Más Información</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="event-card fade-in">
-                        <div class="event-date">
-                            <div style="font-size: 1.5rem;">28</div>
-                            <div>NOV 2024</div>
-                        </div>
-                        <div class="event-content">
-                            <h5 class="event-title">Congreso Latinoamericano de Oncología</h5>
-                            <p class="event-location">
-                                <i class="bi bi-geo-alt"></i>
-                                Buenos Aires, Argentina
-                            </p>
-                            <p class="event-description">
-                                Mesa redonda sobre medicina personalizada y terapias moleculares dirigidas en el
-                                tratamiento del cáncer.
-                            </p>
-                            <a href="#" class="btn btn-custom btn-outline-custom">Más Información</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="event-card fade-in">
-                        <div class="event-date">
-                            <div style="font-size: 1.5rem;">12</div>
-                            <div>DIC 2024</div>
-                        </div>
-                        <div class="event-content">
-                            <h5 class="event-title">Foro de Neurociencias y Tecnología</h5>
-                            <p class="event-location">
-                                <i class="bi bi-geo-alt"></i>
-                                Barcelona, España
-                            </p>
-                            <p class="event-description">
-                                Presentación de avances en neuroplasticidad y aplicaciones de inteligencia artificial en
-                                neurología.
-                            </p>
-                            <a href="#" class="btn btn-custom btn-outline-custom">Más Información</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="event-card fade-in">
-                        <div class="event-date">
-                            <div style="font-size: 1.5rem;">20</div>
-                            <div>ENE 2025</div>
-                        </div>
-                        <div class="event-content">
-                            <h5 class="event-title">Cumbre de Medicina Regenerativa</h5>
-                            <p class="event-location">
-                                <i class="bi bi-geo-alt"></i>
-                                Miami, Estados Unidos
-                            </p>
-                            <p class="event-description">
-                                Workshop intensivo sobre terapias con células madre y las perspectivas futuras de la
-                                medicina regenerativa.
-                            </p>
-                            <a href="#" class="btn btn-custom btn-outline-custom">Más Información</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="event-card fade-in">
-                        <div class="event-date">
-                            <div style="font-size: 1.5rem;">05</div>
-                            <div>FEB 2025</div>
-                        </div>
-                        <div class="event-content">
-                            <h5 class="event-title">Conferencia de Salud Digital</h5>
-                            <p class="event-location">
-                                <i class="bi bi-geo-alt"></i>
-                                São Paulo, Brasil
-                            </p>
-                            <p class="event-description">
-                                Keynote sobre la transformación digital en hospitales y el futuro de la telemedicina en
-                                América Latina.
-                            </p>
-                            <a href="#" class="btn btn-custom btn-outline-custom">Más Información</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="event-card fade-in">
-                        <div class="event-date">
-                            <div style="font-size: 1.5rem;">18</div>
-                            <div>MAR 2025</div>
-                        </div>
-                        <div class="event-content">
-                            <h5 class="event-title">Simposio de Salud Pública Global</h5>
-                            <p class="event-location">
-                                <i class="bi bi-geo-alt"></i>
-                                Ginebra, Suiza
-                            </p>
-                            <p class="event-description">
-                                Panel de expertos sobre preparación ante pandemias y fortalecimiento de sistemas de
-                                salud globales.
-                            </p>
-                            <a href="#" class="btn btn-custom btn-outline-custom">Más Información</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- ===== CLIENTS SECTION ===== -->
     <section id="clients" class="clients-section section-padding">
@@ -706,11 +557,12 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4">
-                    <h5>
-                        <i class="bi bi-activity me-2"></i>Mediscience Speakers
-                    </h5>
-                    <p>Conectamos la excelencia científica con el liderazgo médico, facilitando el intercambio de
-                        conocimientos que transforman la atención en salud.</p>
+                    <div class="footer-brand mb-3">
+                        <img src="assets/images/speakers/logoMSG.svg" alt="MediScience Group" class="footer-logo">
+                    </div>
+                    <p>Desarrollamos tecnología médica de vanguardia y soluciones científicas innovadoras que
+                        transforman
+                        la atención en salud y mejoran la calidad de vida.</p>
                     <div class="social-links">
                         <a href="#"><i class="bi bi-linkedin"></i></a>
                         <a href="#"><i class="bi bi-twitter"></i></a>
@@ -725,8 +577,7 @@
                     <ul class="footer-links">
                         <li><a href="#home">Inicio</a></li>
                         <li><a href="#about">Nosotros</a></li>
-                        <li><a href="#speakers">Conferencistas</a></li>
-                        <li><a href="#events">Eventos</a></li>
+                        <li><a href="#services">Productos y Servicios</a></li>
                         <li><a href="#contact">Contacto</a></li>
                     </ul>
                 </div>
@@ -734,11 +585,11 @@
                 <div class="col-lg-3 col-md-6">
                     <h5>Servicios</h5>
                     <ul class="footer-links">
-                        <li><a href="#">Keynote Speakers</a></li>
-                        <li><a href="#">Paneles de Expertos</a></li>
-                        <li><a href="#">Workshops Médicos</a></li>
+                        <li><a href="#">Tecnología Médica Digital</a></li>
+                        <li><a href="#">Investigación y Desarrollo</a></li>
+                        <li><a href="#">Equipos Médicos Especializados</a></li>
                         <li><a href="#">Consultoría Científica</a></li>
-                        <li><a href="#">Eventos Virtuales</a></li>
+                        <li><a href="#">Análisis de Laboratorio</a></li>
                     </ul>
                 </div>
 
@@ -758,7 +609,7 @@
 
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <p class="mb-0">&copy; 2024 Mediscience Speakers. Todos los derechos reservados.</p>
+                    <p class="mb-0">&copy; 2024 MediScience Group. Todos los derechos reservados.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
                     <a href="#" class="text-light text-decoration-none me-3">Política de Privacidad</a>
@@ -768,36 +619,6 @@
         </div>
     </footer>
 
-    <!-- ===== SPEAKER MODAL ===== -->
-    <div class="modal fade" id="speakerModal" tabindex="-1" aria-labelledby="speakerModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="speakerModalLabel">Perfil del Conferencista</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row g-4">
-                        <div class="col-md-4">
-                            <div class="speaker-modal-image">
-                                <i class="bi bi-person-circle"></i>
-                            </div>
-                        </div>
-                        <div class="col-md-8">
-                            <h4 id="modalSpeakerName">Nombre del Conferencista</h4>
-                            <p class="text-primary fw-bold" id="modalSpeakerSpecialty">Especialidad</p>
-                            <p id="modalSpeakerDescription">Descripción detallada del conferencista...</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-custom btn-outline-custom"
-                        data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-custom btn-primary-custom">Solicitar Información</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
